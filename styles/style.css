@@ -6,12 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  color: #ffffff;
 }
 /* html {
   font-size: 16px;
 } */
 body {
+  color: #ffffff;
   padding: 1rem 8rem;
   background-color: #000000;
 }
@@ -20,6 +20,11 @@ h2 {
   font-size: 3rem;
   font-weight: 900;
   line-height: 4rem;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
 }
 h4 {
   font-size: 1.3rem;
@@ -34,7 +39,9 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   background-color: #e6533c;
+  color: white;
   padding: 1rem 2rem;
+  margin: 1rem 0;
   border-radius: 2.8rem;
 }
 section {
@@ -269,7 +276,65 @@ h1 {
   left: 20%;
   bottom: 20%;
 }
+.bmi-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mbi-calculate {
+  background-color: #222222;
+  display: flex;
+}
+.mbi-calculate-chart {
+  width: 50%;
+}
+.calculate-mbi {
+  width: 50%;
+}
+table {
+  margin-top: 2rem;
+  text-align: left;
+  border-collapse: collapse;
+}
+table th,
+td {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  padding: 0.6rem;
+}
 
+.calculate-mbi-de {
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+#height-cm,
+#weight-kg,
+#age {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+}
+::placeholder {
+  color: #ffffff;
+}
+select {
+  /* display: block; */
+  width: 100%;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+}
+
+.mbi-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+#activity {
+  grid-column: 1/-1;
+}
 @media screen and (max-width: 576px) {
   body {
     padding: 1rem;
@@ -306,12 +371,11 @@ h1 {
     display: flex;
     flex-direction: column;
   }
-  .traning-img-1,
-  .traning-img-2,
-  .traning-img-3,
-  .traning-img-4,
-  .traning-img-5,
-  .traning-img-6 {
-    grid-column: 1fr;
+  .mbi-calculate {
+    flex-direction: column;
+  }
+  .mbi-calculate-chart,
+  .calculate-mbi {
+    width: 100%;
   }
 }
